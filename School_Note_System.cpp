@@ -3,7 +3,30 @@
 #include<string>
 #include<vector>
 using namespace std;
-
+void AddStudent(){
+	string temp;
+	cout << "Enter Student's First Name: ";
+	cin >> temp;
+	Data.push_back(temp);
+	cout << "Enter Student's Last Name: ";
+	cin >> temp;
+	Data.push_back(temp);
+	cout << "Enter Student's Phone Numbers: ";
+	cin >> temp;
+	Data.push_back(temp);	
+	cout << "Enter Student's ID Numbers: ";
+	cin >> temp;
+	Data.push_back(temp);
+	string fileName;
+	fileName = Data[3]+".dat";
+	ofstream file;
+	file.open(fileName.c_str());
+	file << Data[0] << endl;
+	file << Data[1] << endl;
+	file << Data[2] << endl;
+	file << Data[3] << endl;
+	file.close();
+}
 int main(){
 	int sel = 0;
 	while(true){
